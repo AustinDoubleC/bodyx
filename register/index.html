@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../register.css" rel="stylesheet">
+    <title>Body-x Register</title>
+</head>
+<body>
+    <h1>Account Registration</h1>
+    <div id="register-outer">
+        <div id="register-container">
+            <div id="name-container" class="input-container">
+                <label for="username" id="label-name">Name: </label>
+                <input type="text"placeholder="Enter your name..." id="username"/>
+            </div>
+            <div id="email-container" class="input-container">
+                <label for="email">Email address:</label>
+                <input type="email"placeholder="Enter your email..." id="email"/>
+            </div>
+            <div id="password-container" class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter your password..." id="password">
+            </div>
+            <div id="cfm-password-container" class="input-container">
+                <label for="cfm-password">Re-enter password:</label>
+                <input type="password" placeholder="Enter your password again..." id="cfm-password">
+            </div>
+            
+            <button id="btn-register" onclick=register()>Submit</button>
+            <p id="message"></p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../register.js"></script>
+</body>
+</html>

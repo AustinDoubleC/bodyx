@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9d7cdc151.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Body-x</title>
+</head>
+<body>
+    <nav>
+        <div id="nav-main">
+            <div id="logo-container">
+                <h2 id="logo-symbol">B<span id="dash">-</span>X</h2>
+                <h2 id="logo-text">BODY-X</h2>
+            </div>
+            <div id="sections-container">
+                <a href ="#programs-container">PROGRAMS</a>
+                <a href ="#plans-container">PLANS</a>
+                <h2 id="btn-modal-open">RESULT</h2>
+                <a href ="#contact-container">CONTACT</a>
+            </div>
+            <div id="menu-container">
+                <i class="fa-solid fa-bars" id="btn-menu-open"></i>
+                <i class="fa-solid fa-xmark" id="btn-menu-close"></i>
+                <div id="menu">
+                    <a href ="#welcome-container"><h3 class="menu-item">Home</h3></a>
+                    <h3 class="menu-item" id="btn-Menu-Programs">Programs</h3>
+                        <div id="submenu">
+                            <p class="submenu-item">Gain Muscle</p>
+                            <p class="submenu-item">Weight Loss</p>
+                            <p class="submenu-item">Calisthenics</p>
+                        </div>
+                    <a href ="#plans-container"><h3 class="menu-item">Plans</h3></a>
+                    <h3 class="menu-item" id="btn-Menu-Result">Result</h3>
+                    <a href ="#contact-container"><h3 class="menu-item">Contact</h3></a>
+                    <a href ="#contact-faq"><h3 class="menu-item">FAQ</h3></a>
+            
+                </div>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <div id="welcome-container">
+        <div id="login-container">
+            <h3>Member Login</h3>
+            <div id="login-inner">
+                <div id="form-container">
+                    <input type="email"placeholder="email" id="email"/>
+                    <input type="password" placeholder="password" id="password">
+                    <button id="btn-login">Login</button>
+                    <p id="error-message"></p>
+                </div>
+                <div id="joinus-container">
+                    <p>Not a member yet?</p>
+                    <button onclick="register()">Join us</button>
+                </div>
+                
+            </div>
+        </div>
+        <div id="hero-container">
+        </div>
+    </div>
+    <div id="programs-container">
+        <div id="programs-inner">
+            <div id="programs-buttons-container">
+                <h2 class="programs-tab-button active" id="btn-tab-muscle">Gain Muscle</h2>
+                <h2 class="programs-tab-button" id="btn-tab-loss">Weight Loss</h2>
+                <h2 class="programs-tab-button" id="btn-tab-cali">Calisthenics</h2>
+            </div>
+            <div id="programs-tabs">
+                <div class="program-tab show" id="tab-muscle">
+                    <div class="program-container">
+                        <h2 class="program-title"><span>MAX</span> Size</h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                                <li class="program-text">Lorem ipsum dolor sit.</li>
+                                <li class="program-text">Lorem ipsum dolor sit.</li>
+                                <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                    <div class="program-container">
+                        <h2 class="program-title">Total <span>Beast</span></h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                    <div class="program-container">
+                        <h2 class="program-title"><span>M</span>onster</h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program-tab" id="tab-loss">
+                    <div class="program-container">
+                        <h2 class="program-title"><span>Insane</span> HIIT</h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                    <div class="program-container">
+                        <h2 class="program-title"><span>6</span> Packs</h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program-tab" id="tab-cali">
+                    <div class="program-container">
+                        <h2 class="program-title"><span>Home </span>Gym</h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                    <div class="program-container">
+                        <h2 class="program-title">Street <span>Freak</span></h2>
+                        <img src="image/gym.avif" alt="program" class="program-image"/>
+                        <ul>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                            <li class="program-text">Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="plans-container">
+        <h2>Membership Pricing</h2>
+        <div class="member-container">
+            <div class="member-type">
+                <h2>Beginner</h2>
+            </div>
+            <div class="plan-details">
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> 7/24 access to portal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Meal plans</li>
+                </ul>
+            </div>
+            <div class="plan-closing">
+                <h1 class="plan-fee">10.99</h1>
+                <button class="btn-join-plan"  onclick="register()">Join</button>
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member-type">
+                <h2>Amateur</h2>
+            </div>
+            <div class="plan-details">
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> 7/24 access to portal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Meal plans</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 1:1 online coaching sessions every 2 weeks</li>
+                </ul>
+            </div>
+            <div class="plan-closing">
+                <h1 class="plan-fee">15.99</h1>
+                <button class="btn-join-plan"  onclick="register()">Join</button>
+            </div>
+        </div>
+        <div class="member-container pro">
+            <div class="member-type">
+                <h2>PRO</h2>
+            </div>
+            <div class="plan-details">
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i> 7/24 access to portal</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tailor made meal plan</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 1:1 online coaching sessions per week</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Instant SMS/Whatsapp support</li>
+                </ul>
+            </div>
+            <div class="plan-closing">
+                <h1 class="plan-fee">24.99</h1>
+                <button class="btn-join-plan"  onclick="register()">Join</button>
+            </div>
+        </div>
+    </div>
+    <div id="reviews-container">
+        <h2>Customer reviews</h2>
+        <div id="rebiews-inner-container">
+                <div class="review-container">
+                    <div class="reviewer ">
+                        <div class="reviewer-name">David,</div>
+                        <div class="reviewer-age">35</div>
+                    </div>
+                <p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium lacus at justo gravida ultrices. Cras laoreet, sem vitae vestibulum.</p>
+                </div>
+                <div class="review-container">
+                    <div class="reviewer">
+                        <div class="reviewer-name">Peter,</div>
+                        <div class="reviewer-age">28</div>
+                    </div>
+                    <p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut erat lacus. Fusce volutpat dolor.</p>
+                </div>
+                <div class="review-container">
+                    <div class="reviewer">
+                        <div class="reviewer-name">George,</div>
+                        <div class="reviewer-age">42</div>
+                    </div>
+                    <p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium lacus at justo gravida ultrices. Cras laoreet, sem vitae vestibulum.</p>
+                </div>
+                <div class="review-container">
+                    <div class="reviewer">
+                        <div class="reviewer-name">Amy,</div>
+                        <div class="reviewer-age">31</div>
+                    </div>
+                    <p class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet augue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor enim sed aliquet tempus. Integer vitae purus.</p>
+                </div>
+        </div>
+        
+    </div>
+    <div id="contact-container">
+    </div>
+    <div id="faq-container">
+    </div>
+    <div id="modal-result">
+        <div id="result-container">
+            <p><i class="fa-solid fa-xmark" id="btn-modal-close"></i></p>
+            <h1>Success Stories</h1>
+            <div id="photo-container">
+                <div class="result-person" id="person-1">
+                    <div class="person-photo-container">
+                        <img class="person-photo" src="./image/man-before.jpg" alt="man-before"/>
+                        <img class="person-photo" src="./image/man-after.jpg" alt="man-after"/>
+                    </div>
+                    <h2>Man Transformation</h2>
+                </div>
+                <div class="result-person" id="person-2">
+                    <div class="person-photo-container">
+                        <img class="person-photo" src="./image/girl-before.jpg" alt="girl-before"/>
+                        <img class="person-photo" src="./image/girl-after.jpg" alt="girl-after"/>
+                    </div>
+                    <h2>Woman Transformation</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+      <script src="index.js"></script>
+</body>
+</html>

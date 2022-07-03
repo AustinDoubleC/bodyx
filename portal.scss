@@ -1,0 +1,13 @@
+$primary-color:rgb(206, 0, 0);
+$secondary-color:rgb(252, 244, 8);
+$main-black:#111;
+$dark-grey:#555;
+$light-grey:#ddd;
+
+body{
+    background-color: $main-black;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    background-color: $primary-color;
+}

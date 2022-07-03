@@ -1,0 +1,543 @@
+html {
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: white;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #111;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 4;
+  top: 0;
+  width: 100%;
+  color: white;
+  padding: 1rem 0;
+}
+nav #nav-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav #logo-container #logo-symbol {
+  background-color: #111;
+  font-size: 3.5rem;
+  font-family: "Righteous", cursive;
+  margin: 0px;
+  line-height: 0.8;
+  text-align: center;
+}
+nav #logo-container #logo-text {
+  background-color: rgb(206, 0, 0);
+  margin: 0px;
+  line-height: 0.8;
+  padding: 0.1rem 0.3rem;
+}
+nav #sections-container {
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1000px) {
+  nav #sections-container {
+    display: none;
+  }
+}
+nav #sections-container h2 {
+  font-size: 1.5rem;
+  margin: 0px 1rem 0px 1rem;
+  transition: 0.5s;
+}
+nav #sections-container h2:hover,
+nav #sections-container h2:active {
+  cursor: pointer;
+  color: rgb(252, 244, 8);
+}
+nav #sections-container a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0px 1rem 0px 1rem;
+  transition: 0.5s;
+  color: white;
+}
+nav #sections-container a:hover,
+nav #sections-container a:active {
+  color: rgb(252, 244, 8);
+}
+nav #menu-container #btn-menu-open,
+nav #menu-container #btn-menu-close {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: 0.5s;
+  width: 1rem;
+}
+nav #menu-container #btn-menu-close {
+  display: none;
+}
+nav #menu-container #btn-menu-open {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  nav #menu-container #btn-menu-open {
+    display: block;
+  }
+}
+nav #menu-container #btn-menu-open:hover,
+nav #menu-container #btn-menu-close:hover,
+nav #menu-container #btn-menu-open:active,
+nav #menu-container #btn-menu-close:active {
+  cursor: pointer;
+  color: rgb(252, 244, 8);
+}
+
+#welcome-container {
+  width: 100%;
+  max-width: 1100px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 0 auto;
+  background-image: url("image/gym.jpg");
+  background-size: cover;
+}
+#welcome-container #login-container {
+  width: 30%;
+  margin-top: 80px;
+  margin-left: 1.5rem;
+  background-color: #555;
+  box-shadow: 0px 0px 2px #111;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+  #welcome-container #login-container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #welcome-container #login-container {
+    width: 50%;
+  }
+}
+#welcome-container #login-container h3 {
+  color: white;
+}
+#welcome-container #login-container #login-inner {
+  background-color: #ddd;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+#welcome-container #login-container #login-inner #form-container {
+  display: flex;
+  flex-direction: column;
+}
+#welcome-container #login-container #login-inner #form-container input, #welcome-container #login-container #login-inner #form-container button {
+  border-radius: 0.2rem;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0.7rem auto;
+  border: 0.3px solid #555;
+}
+#welcome-container #login-container #login-inner #form-container input {
+  padding-left: 5px;
+  width: calc(95% - 5px);
+}
+#welcome-container #login-container #login-inner #form-container button {
+  width: 95%;
+  height: 2.5rem;
+  border: 0.1px #555 solid;
+  background-color: rgb(252, 244, 8);
+  color: #111;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+#welcome-container #login-container #login-inner #form-container button:hover, #welcome-container #login-container #login-inner #form-container button :active {
+  cursor: pointer;
+}
+#welcome-container #login-container #login-inner #form-container #error-message {
+  margin: 0 0 0 1rem;
+  padding: 0;
+  color: rgb(206, 0, 0);
+}
+#welcome-container #login-container #login-inner #joinus-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 95%;
+  padding: 1rem 0rem 1rem 0rem;
+}
+#welcome-container #login-container #login-inner #joinus-container button {
+  background-color: rgb(206, 0, 0);
+  font-size: 1rem;
+  border: 0.1px #555 solid;
+  padding: 0rem 1rem;
+  margin-left: 1rem;
+  color: white;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+#welcome-container #login-container #login-inner #joinus-container button:hover, #welcome-container #login-container #login-inner #joinus-container button :active {
+  cursor: pointer;
+}
+#welcome-container #hero-container {
+  width: 70%;
+  height: 100%;
+}
+
+#programs-container {
+  width: 100%;
+  margin: 50px 0;
+  padding: 2rem 0;
+}
+#programs-container #programs-inner {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+}
+#programs-container #programs-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+#programs-container #programs-buttons-container .programs-tab-button {
+  width: 33%;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: 1px solid #111;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 0.5rem 0;
+  transition: 0.5s;
+  margin: 0px;
+}
+#programs-container #programs-buttons-container .programs-tab-button.active {
+  background-color: #111;
+}
+#programs-container #programs-buttons-container .programs-tab-button.active:hover, #programs-container #programs-buttons-container .programs-tab-button.active :active {
+  background-color: #111;
+}
+#programs-container #programs-buttons-container .programs-tab-button:hover,
+#programs-container #programs-buttons-container .programs-tab-button:active {
+  cursor: pointer;
+}
+#programs-container #programs-tabs {
+  background-color: #ddd;
+  padding: 2rem;
+  height: 400px;
+}
+@media screen and (max-width: 600px) {
+  #programs-container #programs-tabs {
+    height: auto;
+  }
+}
+#programs-container .program-tab {
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+#programs-container .program-tab.show {
+  justify-content: space-around;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  #programs-container .program-tab.show {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#programs-container .program-tab .program-container {
+  width: 250px;
+  height: 350px;
+  color: white;
+  border-radius: 0.5rem;
+  background-color: #555;
+  padding: 0.5rem, 0.5rem;
+  margin: 0px 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  #programs-container .program-tab .program-container {
+    margin: 0.5rem;
+  }
+}
+#programs-container .program-tab .program-container .program-image {
+  width: 95%;
+  border: 1px white solid;
+  margin: 0px 2.5%;
+}
+#programs-container .program-tab .program-container h2 {
+  text-align: center;
+}
+#programs-container .program-tab .program-container span {
+  color: rgb(252, 244, 8);
+}
+#programs-container #tab-muscle {
+  opacity: 1;
+}
+
+#plans-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+#plans-container h2 {
+  color: #555;
+  margin-left: 0.5rem;
+}
+#plans-container .member-container {
+  background-color: #ddd;
+  color: #111;
+  display: flex;
+  margin: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+#plans-container .member-container .member-type {
+  width: 150px;
+  text-align: center;
+}
+#plans-container .member-container .plan-details {
+  width: 400px;
+}
+#plans-container .member-container .plan-details li {
+  list-style: none;
+  margin: 0.5rem;
+}
+#plans-container .member-container .plan-details li .fa-circle-check {
+  color: rgb(76, 212, 76);
+}
+#plans-container .member-container .plan-closing {
+  text-align: center;
+  margin-right: 1rem;
+}
+#plans-container .member-container .plan-closing .plan-fee {
+  margin: 0.5rem 0;
+}
+#plans-container .member-container .plan-closing .plan-fee::before {
+  content: "$";
+  font-size: 1rem;
+}
+#plans-container .member-container .plan-closing .plan-fee::after {
+  content: "/mo";
+  font-size: 1rem;
+}
+#plans-container .member-container .plan-closing button {
+  background-color: rgb(206, 0, 0);
+  color: white;
+  font-size: 1.2rem;
+  border: 1px solid #555;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+#plans-container .member-container .plan-closing button:hover, #plans-container .member-container .plan-closing button :active {
+  cursor: pointer;
+  background-color: rgb(252, 244, 8);
+  color: #111;
+}
+#plans-container .pro {
+  background-color: rgb(252, 252, 52);
+  color: #111;
+}
+#plans-container .pro h2 {
+  color: rgb(206, 0, 0);
+}
+
+#reviews-container {
+  background-color: white;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #555;
+}
+#reviews-container #rebiews-inner-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#reviews-container .review-container {
+  padding: 20px 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  background-color: rgb(233, 232, 232);
+  margin: 10px 0px;
+}
+#reviews-container .review-container .reviewer {
+  display: flex;
+  justify-content: flex-start;
+}
+#reviews-container .review-container .reviewer .reviewer-name {
+  font-weight: bold;
+}
+#reviews-container .review-container .reviewer .reviewer-age {
+  margin-left: 0.5rem;
+}
+#reviews-container .review-container .review {
+  letter-spacing: 1.1px;
+  font-style: italic;
+}
+
+#contact-container {
+  background-color: #111;
+  width: 100%;
+  height: 500px;
+}
+
+#modal-result {
+  position: fixed;
+  top: -500px;
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 3;
+}
+#modal-result #result-container {
+  width: 1000px;
+  height: 450px;
+  margin: 0 auto;
+  background-color: #111;
+}
+@media screen and (max-width: 1000px) {
+  #modal-result #result-container {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #modal-result #result-container {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #modal-result #result-container {
+    width: 350px;
+  }
+}
+#modal-result #result-container #photo-container {
+  display: flex;
+  justify-content: space-around;
+}
+#modal-result #result-container #photo-container h2 {
+  color: white;
+  background-color: rgb(206, 0, 0);
+  padding-left: 1rem;
+}
+@media screen and (max-width: 500px) {
+  #modal-result #result-container #photo-container h2 {
+    font-size: 1rem;
+  }
+}
+#modal-result #result-container #photo-container .person-photo-container {
+  display: flex;
+}
+#modal-result #result-container #photo-container .person-photo-container img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 1000px) {
+  #modal-result #result-container #photo-container .person-photo-container img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #modal-result #result-container #photo-container .person-photo-container img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #modal-result #result-container #photo-container .person-photo-container img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+  }
+}
+@media screen and (max-height: 500px) {
+  #modal-result #result-container #photo-container .person-photo-container img {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+  }
+}
+#modal-result #result-container #photo-container .person-photo-container .result-text {
+  background-color: rgb(206, 0, 0);
+}
+#modal-result #result-container h1 {
+  background-color: rgb(206, 0, 0);
+  color: white;
+  font-size: 3rem;
+  padding: 0.5rem 0rem 0.5rem 2rem;
+}
+@media screen and (max-width: 500px) {
+  #modal-result #result-container h1 {
+    font-size: 1.5rem;
+    padding: 0.2rem 0rem 0.2rem 2rem;
+  }
+}
+@media screen and (max-height: 500px) {
+  #modal-result #result-container h1 {
+    font-size: 1.5rem;
+    padding: 0.2rem 0rem 0.2rem 2rem;
+  }
+}
+#modal-result #result-container #btn-modal-close {
+  color: white;
+  transition: 0.5s;
+  margin: 0.5rem 0.5rem 0 0;
+  font-size: 1.5rem;
+}
+#modal-result #result-container #btn-modal-close:hover, #modal-result #result-container #btn-modal-close :active {
+  color: rgb(252, 244, 8);
+  cursor: pointer;
+}
+#modal-result #result-container p {
+  text-align: right;
+}
+
+#menu {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  width: 150px;
+  background-color: #111;
+  transition: 0.5s;
+}
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+#menu #submenu {
+  display: none;
+}
+#menu .menu-item {
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+#menu .menu-item:hover, #menu .menu-item :active {
+  cursor: pointer;
+  background-color: #555;
+  color: rgb(252, 244, 8);
+}/*# sourceMappingURL=style.css.map */
