@@ -100,12 +100,18 @@
                         <label for="payment-card">Card number</label>
                         <input type="text" id="payment-card" required>
                     </div>
-                    <label for="payment-month">Expiry month</label>
-                    <input type="text" id="payment-month" required>
-                    <label for="payment-year" id="payment-year-label">/</label>
-                    <input type="text" id="payment-year" required>
-                    <label for="payment-cvv" id="payment-cvv-label">CVV</label>
-                    <input type="text" id="payment-cvv" required><br>
+                    <div id="card-date-container">
+                        <div id="card-year-month">
+                            <label for="payment-month">Expiry month</label>
+                            <input type="text" id="payment-month" required>
+                            <label for="payment-year" id="payment-year-label">/</label>
+                            <input type="text" id="payment-year" required>
+                        </div>
+                        <div>
+                            <label for="payment-cvv" id="payment-cvv-label">CVV</label>
+                            <input type="text" id="payment-cvv" required>
+                        </div>
+                    </div>
                     <div id="btn-submit-container">
                         <p id="payment-submit" onclick=handleForm()>Submit</p>
                         <p id="btn-payment-close">Cancel</p>

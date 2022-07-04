@@ -227,6 +227,12 @@ nav{
     #payment-card-container{
       margin-bottom: 1.5rem;
     }
+    #card-date-container{
+        display: flex;
+        @media screen and (max-width:800px) {
+            flex-direction: column;
+          }
+    }
     #payment-month,
     #payment-year,
     #payment-cvv{
@@ -241,7 +247,11 @@ nav{
     #payment-year-label{
     margin-right: 0;
     }
-    
+    #card-year-month{
+        @media screen and (max-width:800px) {
+            margin-bottom: 1.5rem;
+          }
+    }
     input{
       font-size: 1rem;
       height: 1.5rem;

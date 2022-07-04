@@ -230,6 +230,14 @@ nav #logo-container #logo-text {
 #portal-container .payment-container #payment-card-container {
   margin-bottom: 1.5rem;
 }
+#portal-container .payment-container #card-date-container {
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #card-date-container {
+    flex-direction: column;
+  }
+}
 #portal-container .payment-container #payment-month,
 #portal-container .payment-container #payment-year,
 #portal-container .payment-container #payment-cvv {
@@ -247,6 +255,11 @@ nav #logo-container #logo-text {
 }
 #portal-container .payment-container #payment-year-label {
   margin-right: 0;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #card-year-month {
+    margin-bottom: 1.5rem;
+  }
 }
 #portal-container .payment-container input {
   font-size: 1rem;
