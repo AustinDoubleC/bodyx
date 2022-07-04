@@ -216,16 +216,28 @@ nav{
     
     #payment-email-container{
       margin-left: 1.5rem;
+      display: flex;
+      flex-direction: column;
       @media screen and (max-width:800px) {
         margin-left: 0;
         margin-bottom: 1.5rem;
       }
     }
     #payment-name-container{
-      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width:800px) {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+      }
     }
     #payment-card-container{
       margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      #payment-card{
+        width: 200px;
+      }
     }
     #card-date-container{
         display: flex;

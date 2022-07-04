@@ -217,6 +217,8 @@ nav #logo-container #logo-text {
 }
 #portal-container .payment-container #payment-email-container {
   margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 800px) {
   #portal-container .payment-container #payment-email-container {
@@ -225,10 +227,22 @@ nav #logo-container #logo-text {
   }
 }
 #portal-container .payment-container #payment-name-container {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #payment-name-container {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
 }
 #portal-container .payment-container #payment-card-container {
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+#portal-container .payment-container #payment-card-container #payment-card {
+  width: 200px;
 }
 #portal-container .payment-container #card-date-container {
   display: flex;
