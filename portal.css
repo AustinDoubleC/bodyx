@@ -1,8 +1,316 @@
 body {
-  background-color: #111;
+  background-color: #ddd;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
-h1 {
+nav {
+  background-color: #111;
+  width: 100%;
+  color: white;
+  padding: 1rem 0;
+}
+nav #nav-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav #nav-main h1, nav #nav-main h3 {
+  margin: 0;
+}
+nav #nav-main h1 {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  nav #nav-main h1 {
+    font-size: 1.5rem;
+  }
+}
+nav #nav-main #greeting {
+  margin-right: 0.5rem;
+}
+nav #logo-container {
+  margin-left: 0.5rem;
+}
+nav #logo-container #logo-symbol {
+  background-color: #111;
+  font-size: 3.5rem;
+  font-family: "Righteous", cursive;
+  margin: 0px;
+  line-height: 0.8;
+  text-align: center;
+}
+nav #logo-container #logo-text {
   background-color: rgb(206, 0, 0);
+  margin: 0px;
+  line-height: 0.8;
+  padding: 0.1rem 0.3rem;
+}
+
+#portal-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#portal-container #plan, #portal-container #program {
+  width: 80%;
+  margin: 1rem auto;
+}
+#portal-container #subscribe {
+  width: calc(80% - 2rem);
+  margin: 3rem auto;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: #555 0.5rem solid;
+}
+#portal-container #subscribe h3 {
+  margin-right: 4rem;
+  margin-top: 0;
+}
+#portal-container #subscribe .plan-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  width: 300px;
+}
+@media screen and (max-width: 800px) {
+  #portal-container #subscribe .plan-type {
+    width: 150px;
+  }
+}
+#portal-container #subscribe .plan-type p {
+  margin-top: 0;
+  font-weight: bold;
+}
+#portal-container #subscribe #selectedPlan {
+  width: 150px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+}
+#portal-container #subscribe #btn-subscribe {
+  font-size: 1rem;
+  height: 2rem;
+  padding: 0 1rem;
+  background-color: rgb(252, 244, 8);
+  border: 1px black solid;
+  border-radius: 0.2rem;
+}
+#portal-container #subscribe #btn-subscribe:hover, #portal-container #subscribe #btn-subscribe :active {
+  cursor: pointer;
+}
+#portal-container #enroll {
+  width: calc(80% - 2rem);
+  margin: 3rem auto;
+  display: none;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: #555 0.5rem solid;
+}
+#portal-container #enroll #programs-container {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+  #portal-container #enroll #programs-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #portal-container #enroll #programs-container {
+    flex-direction: column;
+  }
+}
+#portal-container #enroll #programs-container .program-container {
+  margin-right: 1rem;
+}
+#portal-container #enroll #program-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+#portal-container #enroll #btn-submit-program {
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  background-color: rgb(252, 244, 8);
+  margin-right: 1rem;
+}
+#portal-container .payment-container {
+  display: none;
+  width: calc(80% - 2rem);
+  margin: 0 auto;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 1rem;
+  background-color: #ddd;
+  border-radius: 0.5rem;
+  border: #555 0.5rem solid;
+}
+#portal-container .payment-container #payment-title {
+  margin-top: 0;
+}
+#portal-container .payment-container .payment-main {
+  width: 500px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container .payment-main {
+    width: auto;
+  }
+}
+#portal-container .payment-container #btn-submit-container {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+#portal-container .payment-container #btn-submit-container #payment-submit, #portal-container .payment-container #btn-submit-container #btn-payment-close {
+  font-size: 1rem;
+  border: 1px solid #111;
+  border-radius: 0.5rem;
+}
+#portal-container .payment-container #btn-submit-container #payment-submit:hover, #portal-container .payment-container #btn-submit-container #payment-submit :active, #portal-container .payment-container #btn-submit-container #btn-payment-close:hover, #portal-container .payment-container #btn-submit-container #btn-payment-close :active {
+  cursor: pointer;
+}
+#portal-container .payment-container #btn-submit-container #payment-submit {
+  background-color: rgb(252, 244, 8);
+  padding: 0.5rem 4rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #btn-submit-container #payment-submit {
+    padding: 0.5rem 2rem;
+  }
+}
+#portal-container .payment-container #btn-submit-container #btn-payment-close {
+  background-color: rgb(206, 0, 0);
+  color: white;
+  padding: 0.5rem 0.5rem;
+}
+#portal-container .payment-container label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+#portal-container .payment-container #payer-info {
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #payer-info {
+    flex-direction: column;
+  }
+}
+#portal-container .payment-container #payment-email-container {
+  margin-left: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #payment-email-container {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+#portal-container .payment-container #payment-name-container {
+  margin-bottom: 1.5rem;
+}
+#portal-container .payment-container #payment-card-container {
+  margin-bottom: 1.5rem;
+}
+#portal-container .payment-container #payment-month,
+#portal-container .payment-container #payment-year,
+#portal-container .payment-container #payment-cvv {
+  width: 40px;
+}
+@media screen and (max-width: 800px) {
+  #portal-container .payment-container #payment-month,
+#portal-container .payment-container #payment-year,
+#portal-container .payment-container #payment-cvv {
+    width: 30px;
+  }
+}
+#portal-container .payment-container #payment-year {
+  margin-right: 50px;
+}
+#portal-container .payment-container #payment-year-label {
+  margin-right: 0;
+}
+#portal-container .payment-container input {
+  font-size: 1rem;
+  height: 1.5rem;
+}
+#portal-container #dashboard {
+  width: calc(95% - 2rem);
+  background-color: #111;
+  display: none;
+  color: white;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 0.5rem solid #555;
+  border-radius: 0.5rem;
+}
+#portal-container #dashboard #dashboard-program {
+  margin: 0 0 1rem 2rem;
+}
+#portal-container #dashboard #week {
+  margin: 0 0 1rem 2rem;
+}
+#portal-container #dashboard .dashboard-title {
+  text-align: center;
+}
+#portal-container #dashboard #workout-container {
+  display: flex;
+  justify-content: center;
+}
+#portal-container #dashboard #workout-container h3, #portal-container #dashboard #workout-container p {
+  text-align: center;
+  width: 100%;
+}
+#portal-container #dashboard #workout-container h3 {
+  padding: 0.5rem 0;
+  background-color: #555;
+  color: #ddd;
+  margin: 0;
+}
+#portal-container #dashboard #workout-container .workout-day {
+  width: 15%;
+  padding: 0;
+  background-color: #ddd;
+  color: #555;
+  margin-right: 0.2rem;
+}
+#portal-container #dashboard #meal-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+#portal-container #dashboard #meal-container h3, #portal-container #dashboard #meal-container p {
+  text-align: center;
+  width: 100%;
+}
+#portal-container #dashboard #meal-container h3 {
+  padding: 0.5rem 0;
+  background-color: #555;
+  color: #ddd;
+  margin: 0;
+}
+#portal-container #dashboard #meal-container .meal-day {
+  width: 15%;
+  padding: 0;
+  background-color: #ddd;
+  color: #555;
+  margin-right: 0.2rem;
 }/*# sourceMappingURL=portal.css.map */

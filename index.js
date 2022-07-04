@@ -128,9 +128,10 @@ function login () {
     const user = auth.currentUser
     const database_ref = database.ref()
     database_ref.child('users/' + user.uid)
+    sessionStorage.setItem("username",user.uid)
     console.log(user)
     window.location = "./portal";
-
+    
   })
   .catch(function(error) {
     if (error.code === "auth/wrong-password"){

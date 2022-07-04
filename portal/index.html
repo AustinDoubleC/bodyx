@@ -4,11 +4,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9d7cdc151.js" crossorigin="anonymous"></script>
     <link href="../portal.css" rel="stylesheet">
     <title>Body-x Portal</title>
 </head>
 <body>
-    <h1>Portal</h1>
+    <nav>
+        <div id="nav-main">
+            <div id="logo-container">
+                <h2 id="logo-symbol">B<span id="dash">-</span>X</h2>
+                <h2 id="logo-text">BODY-X</h2>
+            </div>
+            <h1>Member Portal</h1>
+            <h3 id="greeting"></h3>
+        </div>
+    </nav>
+    <div id="portal-container">
+        <h3 id="plan"></h3>
+        <h3 id="program"></h3>
+        <div id="subscribe">
+            <h3>Subscribe your plan</h3>
+            <div>
+                <div class="plan-type">
+                    <p>Beginner</p>
+                    <p>$10.99</p>
+                </div>
+                <div class="plan-type">
+                    <p>Amateur</p>
+                    <p>$15.99</p>
+                </div>
+                <div class="plan-type">
+                    <p>Pro</p>
+                    <p>$24.99</p>
+                </div>
+                <select id="selectedPlan" name="selectedPlan">
+                    <option value="beginner">Beginner</option>
+                    <option value="amateur">Amateur</option>
+                    <option value="pro" selected="selected">Pro</option>
+                </select>
+                <button onclick=payment() id="btn-subscribe">Subscribe</button>
+            </div>
+        </div>
+        <div id="enroll">
+            <h3>Select your program</h3>
+            <div id="programs-container">
+                <div class="program-container">
+                    <p class="program-type">Gain Muscle</p>
+                    <input type="radio" id="MAX-size" name="program" value="MAX-size" checked="checked">
+                    <label for="html">MAX Size</label><br>
+                    <input type="radio" id="Total-beast" name="program" value="Total-beast">
+                    <label for="css">Total Beast</label><br>
+                    <input type="radio" id="Monster" name="program" value="Monster">
+                    <label for="javascript">Monster</label>
+                </div>
+                <div class="program-container">
+                    <p class="program-type">Weight Loss</p>
+                    <input type="radio" id="insance-HIIT" name="program" value="insance-HIIT">
+                    <label for="html">Insane HIIT</label><br>
+                    <input type="radio" id="6-packs" name="program" value="6-packs">
+                    <label for="css">6 Packs</label><br>
+                </div>
+                <div class="program-container">
+                    <p class="program-type">Calisthenics</p>
+                    <input type="radio" id="Home-gym" name="program" value="Home-gym">
+                    <label for="html">Home Gym</label><br>
+                    <input type="radio" id="Street-freak" name="program" value="Street-freak">
+                    <label for="css">Street Freak</label><br>
+                </div>
+            </div>
+            <div id="program-button-container">
+                <button id="btn-submit-program" onclick=submitProgram()>Submit</button>
+            </div>
+        </div>
+        <div class="payment-container" id="payment-container">
+            <div class="payment-main">
+                <h2 id="payment-title">Payment Information</h2>
+                <h3 id="payment-total"></h3>
+                <p id="payment-alert"></p>
+                <form class="payment-form">
+                    <div id="payer-info">
+                        <div id="payment-name-container">
+                            <label for="payment-name">Name on card</label>
+                            <input type="text" id="payment-name" placeholder="name" required><br>
+                        </div>
+                        <div id="payment-email-container">
+                            <label for="payment-email">Email</label>
+                            <input type="email" id="payment-email" placeholder="email" required><br>
+                        </div>
+                    </div>
+                    <div id="payment-card-container">
+                        <label for="payment-card">Card number</label>
+                        <input type="text" id="payment-card" required>
+                    </div>
+                    <label for="payment-month">Expiry month</label>
+                    <input type="text" id="payment-month" required>
+                    <label for="payment-year" id="payment-year-label">/</label>
+                    <input type="text" id="payment-year" required>
+                    <label for="payment-cvv" id="payment-cvv-label">CVV</label>
+                    <input type="text" id="payment-cvv" required><br>
+                    <div id="btn-submit-container">
+                        <p id="payment-submit" onclick=handleForm()>Submit</p>
+                        <p id="btn-payment-close">Cancel</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="plan-container">
+        </div>
+        <div id="dashboard">
+            <h1 id="dashboard-program"></h1>
+            <h3 id="week">Week 1</h3>
+            <h2 class="dashboard-title">Workout</h2>
+            <div id="workout-container">
+                <div class="workout-day">
+                    <h3>Sun</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Mon</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Tue</h3>
+                    <p>Rest</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Wed</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Thur</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Fri</h3>
+                    <p>Rest</p>
+                </div>
+                <div class="workout-day">
+                    <h3>Sat</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <h2 class="dashboard-title">Meal Plan</h2>
+            <div id="meal-container">
+                <div class="meal-day">
+                    <h3>Sun</h3>
+                    <p>Meal A</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Mon</h3>
+                    <p>Meal B</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Tue</h3>
+                    <p>Meal C</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Wed</h3>
+                    <p>Meal A</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Thur</h3>
+                    <p>Meal B</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Fri</h3>
+                    <p>Meal C</p>
+                </div>
+                <div class="meal-day">
+                    <h3>Sat</h3>
+                    <p>Meal D</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script src="../portal.js"></script>
 </body>
 </html>

@@ -5,9 +5,309 @@ $dark-grey:#555;
 $light-grey:#ddd;
 
 body{
-    background-color: $main-black;
+    background-color: $light-grey;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
-h1{
-    background-color: $primary-color;
+
+nav{
+    background-color: $main-black;
+    width: 100%;
+    color: white;
+    padding: 1rem 0;
+    #nav-main{
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h1,h3{
+            margin: 0;
+        }
+        h1{
+            font-size: 2.5rem;
+            @media screen and(max-width:800px) {
+                font-size: 1.5rem;
+            }
+        }
+        #greeting{
+            margin-right: 0.5rem;
+        }
+
+    }
+    #logo-container{
+        margin-left: 0.5rem;
+        #logo-symbol{
+            background-color: #111;
+            font-size: 3.5rem;
+            font-family: 'Righteous', cursive;
+            margin: 0px;
+            line-height: 0.8;
+            text-align: center;
+        }
+        #logo-text{
+            background-color: $primary-color;
+            margin: 0px;
+            line-height: 0.8;
+            padding: 0.1rem 0.3rem
+        }
+    }
+    
 }
+
+#portal-container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    #plan, #program{
+        width: 80%;
+        margin: 1rem auto;
+    }
+    #subscribe{
+        width: calc(80% - 2rem);
+        margin: 3rem auto;
+        display: none;
+        opacity: 0;
+        transition: 0.5s;
+        background-color: $light-grey;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: $dark-grey 0.5rem solid;
+        h3{
+            margin-right: 4rem;
+            margin-top: 0;
+        }
+        .plan-type{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0;
+            width: 300px;
+            @media screen and(max-width:800px) {
+                width: 150px;
+            }
+            
+            p{
+                margin-top: 0;
+                font-weight: bold;
+            }
+        }
+        #selectedPlan{
+            width: 150px;
+            font-size: 1rem;
+            margin-top: 1rem;
+            height: 2rem;
+            border-radius: 0.2rem;
+        }
+        #btn-subscribe{
+            font-size: 1rem;
+            height: 2rem;
+            padding: 0 1rem;
+            background-color: $secondary-color;
+            border: 1px black solid;
+            border-radius: 0.2rem;
+            &:hover,:active{
+                cursor: pointer;
+            }
+        }
+    }
+    #enroll{
+        width: calc(80% - 2rem);
+        margin: 3rem auto;
+        display: none;
+        opacity: 0;
+        transition: 0.5s;
+        background-color: $light-grey;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: $dark-grey 0.5rem solid;
+        #programs-container{
+            display: flex;
+            width: 60%;
+            margin: 0 auto;
+            justify-content: space-between;
+            font-weight: bold;
+            @media screen and (max-width:800px){
+                width: 90%;
+            }
+            @media screen and (max-width:600px){
+                flex-direction: column;
+            }
+            .program-container{
+                margin-right: 1rem;
+            }
+        }
+        #program-button-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        #btn-submit-program{
+            font-size: 1rem;
+            padding: 0.2rem 1rem;
+            border: 1px solid black;
+            border-radius: 0.2rem;
+            background-color: $secondary-color;
+            margin-right: 1rem;
+        }
+
+    }
+
+    .payment-container{
+        display: none;
+        width: calc(80% - 2rem);
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.5s;
+        padding: 1rem;
+        background-color: $light-grey;
+        border-radius: 0.5rem;
+        border: $dark-grey 0.5rem solid;
+        
+        #payment-title{
+            margin-top: 0;
+        }
+        .payment-main{
+            width: 500px;
+            margin: 0 auto;
+            @media screen and (max-width:800px) {
+                width: auto
+            }
+        }
+        #btn-submit-container{
+            display: flex;
+            margin-top: 1rem;
+            justify-content: center;
+
+            #payment-submit,#btn-payment-close{
+                font-size: 1rem;
+                border: 1px solid $main-black;
+                border-radius: 0.5rem;
+                &:hover,:active{
+                    cursor: pointer;
+                }
+            }
+            #payment-submit{
+                background-color: $secondary-color;
+                padding: 0.5rem 4rem;
+                font-weight: bold;
+                margin-right: 0.5rem;
+                @media screen and (max-width:800px) {
+                    padding: 0.5rem 2rem;
+                  }
+            }
+            #btn-payment-close{
+                background-color: $primary-color;
+                color: white;
+                padding: 0.5rem 0.5rem;
+            }
+        }
+        
+    label{
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+    #payer-info{
+      display: flex;
+      @media screen and (max-width:800px) {
+        flex-direction: column;
+      }
+    }
+    
+    #payment-email-container{
+      margin-left: 1.5rem;
+      @media screen and (max-width:800px) {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+    #payment-name-container{
+      margin-bottom: 1.5rem;
+    }
+    #payment-card-container{
+      margin-bottom: 1.5rem;
+    }
+    #payment-month,
+    #payment-year,
+    #payment-cvv{
+      width: 40px;
+      @media screen and (max-width:800px) {
+        width: 30px;
+      }
+    }
+    #payment-year{
+      margin-right: 50px;
+    }
+    #payment-year-label{
+    margin-right: 0;
+    }
+    
+    input{
+      font-size: 1rem;
+      height: 1.5rem;
+    }
+    }
+    #dashboard{
+        width: calc(95% - 2rem);
+        background-color: $main-black; 
+        display: none;
+        color: white;
+        padding: 1rem;
+        margin: 0 auto;
+        border: 0.5rem solid $dark-grey;
+        border-radius: 0.5rem;
+        #dashboard-program{
+            margin: 0 0 1rem 2rem;
+        }
+        #week{
+            margin: 0 0 1rem 2rem;
+        }
+        .dashboard-title{
+            text-align: center;
+        }
+        #workout-container{
+            display: flex;
+            justify-content: center;
+            h3,p{
+                text-align: center;
+                width: 100%;
+            }
+            h3{
+                padding: 0.5rem 0;
+                background-color: $dark-grey;
+                color: $light-grey;
+                margin: 0;
+            }
+            .workout-day{
+                width: 15%;
+                padding: 0;
+                background-color: $light-grey;
+                color: $dark-grey;
+                margin-right: 0.2rem;
+            }
+        }
+        #meal-container{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            h3,p{
+                text-align: center;
+                width: 100%;
+            }
+            h3{
+                padding: 0.5rem 0;
+                background-color: $dark-grey;
+                color: $light-grey;
+                margin: 0;
+            }
+            .meal-day{
+                width: 15%;
+                padding: 0;
+                background-color: $light-grey;
+                color: $dark-grey;
+                margin-right: 0.2rem;
+            }
+        }
+    }
+}
+
