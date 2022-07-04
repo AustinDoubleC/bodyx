@@ -148,18 +148,22 @@ nav #menu-container #btn-menu-close:active {
   flex-direction: column;
 }
 #welcome-container #login-container #login-inner #form-container input, #welcome-container #login-container #login-inner #form-container button {
-  border-radius: 0.2rem;
   height: 2rem;
   font-size: 1rem;
   margin: 0.7rem auto;
-  border: 0.3px solid #555;
 }
 #welcome-container #login-container #login-inner #form-container input {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
   padding-left: 5px;
   width: calc(95% - 5px);
+  border: none;
+  border-bottom: 2px solid #555;
+  outline: none;
 }
 #welcome-container #login-container #login-inner #form-container button {
   width: 95%;
+  border-radius: 0.2rem;
   height: 2.5rem;
   border: 0.1px #555 solid;
   background-color: rgb(252, 244, 8);
@@ -210,6 +214,9 @@ nav #menu-container #btn-menu-close:active {
   width: 95%;
   margin: 0 auto;
   background-color: white;
+}
+#programs-container #programs-inner #programs-title {
+  color: #555;
 }
 #programs-container #programs-buttons-container {
   display: flex;
@@ -283,8 +290,11 @@ nav #menu-container #btn-menu-close:active {
 }
 #programs-container .program-tab .program-container .program-image {
   width: 95%;
+  height: 150px;
   border: 1px white solid;
   margin: 0px 2.5%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #programs-container .program-tab .program-container h2 {
   text-align: center;
@@ -299,7 +309,7 @@ nav #menu-container #btn-menu-close:active {
 #plans-container {
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   color: #555;
 }
 #plans-container h2 {
@@ -370,7 +380,7 @@ nav #menu-container #btn-menu-close:active {
   background-color: white;
   width: 95%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   color: #555;
 }
 #reviews-container #rebiews-inner-container {
@@ -378,7 +388,7 @@ nav #menu-container #btn-menu-close:active {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   #reviews-container #rebiews-inner-container {
     justify-content: center;
   }
@@ -390,6 +400,11 @@ nav #menu-container #btn-menu-close:active {
   height: 250px;
   background-color: rgb(233, 232, 232);
   margin: 10px 0px;
+}
+@media screen and (max-width: 600px) {
+  #reviews-container .review-container {
+    margin-right: 0.5rem;
+  }
 }
 #reviews-container .review-container .reviewer {
   display: flex;
@@ -412,6 +427,7 @@ nav #menu-container #btn-menu-close:active {
   color: white;
   margin: 0 auto;
   padding-top: 1rem;
+  padding-bottom: 5rem;
 }
 #contact-container h2 {
   margin: 0 auto;
@@ -422,6 +438,7 @@ nav #menu-container #btn-menu-close:active {
   display: flex;
   width: 80%;
   margin: 0 auto;
+  justify-content: center;
 }
 @media screen and (max-width: 800px) {
   #contact-container #contact-inner {
@@ -479,6 +496,16 @@ nav #menu-container #btn-menu-close:active {
 #contact-container #contact-inner #email-container #btnSubmit {
   margin-top: 1rem;
   font-size: 1rem;
+  outline: none;
+}
+#contact-container #contact-inner #email-container #input-name:hover, #contact-container #contact-inner #email-container #input-name :active,
+#contact-container #contact-inner #email-container #input-email:hover,
+#contact-container #contact-inner #email-container #input-email :active,
+#contact-container #contact-inner #email-container #input-message:hover,
+#contact-container #contact-inner #email-container #input-message :active,
+#contact-container #contact-inner #email-container #btnSubmit:hover,
+#contact-container #contact-inner #email-container #btnSubmit :active {
+  cursor: pointer;
 }
 #contact-container #contact-inner #email-container #input-message {
   height: 3rem;
@@ -494,19 +521,6 @@ nav #menu-container #btn-menu-close:active {
   background-color: #ddd;
   border-radius: 0.2rem;
   padding: 0.2rem 0.5rem;
-}
-
-#faq-container {
-  background-color: #111;
-  width: 100%;
-  color: white;
-  margin: 0 auto;
-  padding-top: 1rem;
-}
-#faq-container h2 {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1100px;
 }
 
 #modal-result {

@@ -50,6 +50,9 @@ h1{
             background-color: $secondary-color;
             border: 1px solid $dark-grey;
             border-radius: 0.2rem;
+            &:hover,:active{
+                cursor: pointer;
+            }
         }
         .input-container{
             width: 400px;
@@ -61,9 +64,12 @@ h1{
         input{
             width: 240px;
             height: 1.5rem;
-            border-radius: 0.2rem;
+            border-top-left-radius: 0.2rem;
+            border-top-right-radius: 0.2rem;
             padding-left:5px;
-            border: 1px solid black;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid black;
         }
         #message{
             color: $primary-color;

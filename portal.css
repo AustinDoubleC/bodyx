@@ -151,6 +151,9 @@ nav #logo-container #logo-text {
   background-color: rgb(252, 244, 8);
   margin-right: 1rem;
 }
+#portal-container #enroll #btn-submit-program:hover, #portal-container #enroll #btn-submit-program :active {
+  cursor: pointer;
+}
 #portal-container .payment-container {
   display: none;
   width: calc(80% - 2rem);
@@ -278,6 +281,11 @@ nav #logo-container #logo-text {
 #portal-container .payment-container input {
   font-size: 1rem;
   height: 1.5rem;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
 }
 #portal-container #dashboard {
   width: calc(95% - 2rem);

@@ -26,7 +26,6 @@ const btnMenuClose = document.getElementById("btn-menu-close")
 const menuDOM = document.getElementById("menu")
 const btnMenuResult = document.getElementById("btn-Menu-Result")
 
-
 btnLogin.addEventListener("click",()=>{
   login()
 })

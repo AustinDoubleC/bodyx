@@ -150,19 +150,23 @@ nav{
             #form-container{
                 display: flex;
                 flex-direction: column;
-                input, button{
-                    border-radius: 0.2rem;
+                input, button{    
                     height: 2rem;
                     font-size: 1rem;
                     margin:0.7rem auto;
-                    border: 0.3px solid $dark-grey;
                 }
                 input{
+                    border-top-left-radius: 0.2rem;
+                    border-top-right-radius: 0.2rem;
                     padding-left:5px;
                     width: calc(95% - 5px);
+                    border: none;
+                    border-bottom: 2px solid $dark-grey;;
+                    outline: none;
                 }
                 button{
                     width: 95%;
+                    border-radius: 0.2rem;
                     height: 2.5rem;
                     border: 0.1px $dark-grey solid;
                     background-color: $secondary-color;
@@ -216,6 +220,9 @@ nav{
         width: 95%;
         margin: 0 auto;
         background-color: white;
+        #programs-title{
+            color: $dark-grey;
+        }
     }
     #programs-buttons-container{
         display: flex;
@@ -278,8 +285,10 @@ nav{
             }
             .program-image{
                 width: 95%;
+                height: 150px;
                 border: 1px white solid;
                 margin: 0px 2.5%;
+                object-fit: cover;
             }
             h2{
                 text-align: center;
@@ -298,7 +307,7 @@ nav{
 #plans-container{
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     color: $dark-grey;
     h2{
         color: $dark-grey;
@@ -370,13 +379,13 @@ nav{
     background-color: white;
     width: 95%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     color: $dark-grey;
     #rebiews-inner-container{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media screen and (max-width:400px){
+        @media screen and (max-width:600px){
             justify-content: center;
         }
     }
@@ -387,6 +396,9 @@ nav{
     height: 250px;
     background-color: rgb(233, 232, 232);
     margin: 10px 0px;
+    @media screen and (max-width:600px){
+        margin-right: 0.5rem;
+    }
         .reviewer{
             display: flex;
             justify-content: flex-start;
@@ -410,6 +422,7 @@ nav{
     color: white;
     margin: 0 auto;
     padding-top: 1rem;
+    padding-bottom: 5rem;
     h2{
         margin: 0 auto;
         width: 100%;
@@ -419,6 +432,7 @@ nav{
         display: flex;
         width: 80%;
         margin: 0 auto;
+        justify-content: center;
         @media screen and (max-width:800px) {
                 width:95%
             }
@@ -466,6 +480,10 @@ nav{
             #btnSubmit{
                 margin-top: 1rem;
                 font-size: 1rem;
+                outline: none;
+                &:hover,:active{
+                    cursor: pointer;
+                }
             }
             #input-message{
                 height: 3rem;
@@ -483,19 +501,6 @@ nav{
         }
     }
 }
-#faq-container{
-    background-color: $main-black;
-    width: 100%;
-    color: white;
-    margin: 0 auto;
-    padding-top: 1rem;
-    h2{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1100px;
-    }
-}
-
 #modal-result{
     position: fixed;
     top: -500px;
