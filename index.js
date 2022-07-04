@@ -24,8 +24,8 @@ const errorMsg = document.getElementById("error-message")
 const btnMenuOpen = document.getElementById("btn-menu-open")
 const btnMenuClose = document.getElementById("btn-menu-close")
 const menuDOM = document.getElementById("menu")
-const btnMenuPrograms = document.getElementById("btn-Menu-Programs")
 const btnMenuResult = document.getElementById("btn-Menu-Result")
+
 
 btnLogin.addEventListener("click",()=>{
   login()

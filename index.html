@@ -30,12 +30,7 @@
                 <i class="fa-solid fa-xmark" id="btn-menu-close"></i>
                 <div id="menu">
                     <a href ="#welcome-container"><h3 class="menu-item">Home</h3></a>
-                    <h3 class="menu-item" id="btn-Menu-Programs">Programs</h3>
-                        <div id="submenu">
-                            <p class="submenu-item">Gain Muscle</p>
-                            <p class="submenu-item">Weight Loss</p>
-                            <p class="submenu-item">Calisthenics</p>
-                        </div>
+                    <a href ="#programs-container"><h3 class="menu-item">Programs</h3></a>
                     <a href ="#plans-container"><h3 class="menu-item">Plans</h3></a>
                     <h3 class="menu-item" id="btn-Menu-Result">Result</h3>
                     <a href ="#contact-container"><h3 class="menu-item">Contact</h3></a>
@@ -235,8 +230,32 @@
         
     </div>
     <div id="contact-container">
+        <h2>Contact us</h2>
+        <div id="contact-inner">
+            <div id="cs-container">
+                <h3>Customer service</h3>
+                  <p>Hotline: +44 012-34567-999</p>
+                  <p>Business hour</p>
+                  <p class="businessHour">Mon-Fri: 09:00-17:00</p>
+                  <p class="businessHour">Sat-Fri: 10:00-16:00</p>
+                  <p>email: <a href="mailto:austinccy81@gmail.com">cs@fitnesspro.com</a></p>
+            </div>
+            <div id="email-container">
+                <form action="https://formsubmit.co/austinccy81@gmail.com" method="POST">
+                    <h3>Leave us a message</h3>
+                    <div id="input-container">
+                            <input type="text" id="input-name" name="name" placeholder="your name" required>
+                            <input type="email" id="input-email" name="email" placeholder="your email" required>
+                            <input type="hidden" name="_next" value="https://austindoublec.github.io/bodyx/">
+                            <textarea id="input-message" name="message" placeholder="your message" required></textarea>
+                    </div>
+                    <button type="submit" id="btnSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
     <div id="faq-container">
+        <h2>FAQ</h2>
     </div>
     <div id="modal-result">
         <div id="result-container">

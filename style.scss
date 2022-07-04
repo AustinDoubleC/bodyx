@@ -56,6 +56,7 @@ nav{
     #sections-container{
         display: flex;
         align-items: flex-end;
+        margin-right: 300px;
         @media screen and (max-width:1000px){
             display: none;
         }
@@ -86,6 +87,10 @@ nav{
         
     }
     #menu-container{
+        display: none;
+        @media screen and (max-width:1000px) {
+            display: block;
+        }
         #btn-menu-open,
         #btn-menu-close{
             font-size: 1.5rem;
@@ -98,10 +103,7 @@ nav{
             display: none;
         }
         #btn-menu-open{
-            display: none;
-            @media screen and (max-width:1000px) {
-                display: block;
-            }
+            display: block;
         }
         #btn-menu-open:hover,
         #btn-menu-close:hover,
@@ -229,6 +231,9 @@ nav{
             padding: 0.5rem 0;
             transition: 0.5s;
             margin:0px;
+            @media screen and (max-width:600px) {
+                font-size: 1.2rem;
+            }
             &.active{
                 background-color: $main-black;
                 &:hover,:active{background-color: $main-black;}
@@ -371,6 +376,9 @@ nav{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media screen and (max-width:400px){
+            justify-content: center;
+        }
     }
     .review-container{
     padding:20px 10px;
@@ -399,7 +407,93 @@ nav{
 #contact-container{
     background-color: $main-black;
     width: 100%;
-    height: 500px;
+    color: white;
+    margin: 0 auto;
+    padding-top: 1rem;
+    h2{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+    }
+    #contact-inner{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        @media screen and (max-width:800px) {
+                width:95%
+            }
+        @media screen and (max-width:600px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        #cs-container{
+            padding: 1rem;
+            width: 300px;
+            margin-right: 5rem;
+            margin-left: 5rem;
+            @media screen and (max-width:1000px) {
+                margin-right: 3rem;
+                margin-left: 3rem;
+            }
+            @media screen and (max-width:800px) {
+                margin-right: 0rem;
+                margin-left: 0rem;
+            }
+            p{
+                margin-left: 1rem;
+            }
+            .businessHour{
+                margin-left: 2rem;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover,:active{
+                    cursor: pointer;
+                    color: $secondary-color;
+                }
+            }
+        }
+        #email-container{
+            width: 300px;
+            padding: 1rem;
+            #input-name,
+            #input-email,
+            #input-message,
+            #btnSubmit{
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+            #input-message{
+                height: 3rem;
+                width: 300px;
+                @media screen and (max-width:800px) {
+                    width:200px;
+                    height: 4rem;
+                }
+            }
+            #btnSubmit{
+                background-color: $light-grey;
+                border-radius: 0.2rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+    }
+}
+#faq-container{
+    background-color: $main-black;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+    padding-top: 1rem;
+    h2{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1100px;
+    }
 }
 
 #modal-result{
@@ -413,7 +507,6 @@ nav{
     z-index: 3;
     #result-container{
         width: 1000px;
-        height: 450px;
         margin: 0 auto;
         background-color: $main-black;
         @media screen and (max-width:1000px) {
