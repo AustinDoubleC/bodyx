@@ -1,0 +1,28 @@
+$primary-color:rgb(206, 0, 0);
+$secondary-color:rgb(252, 244, 8);
+$main-black:#111;
+$dark-grey:#555;
+$light-grey:#ddd;
+
+body{
+    background-color: $dark-grey;
+    font-family: 'Roboto', sans-serif;
+    div{
+        width: 300px;
+        margin: 4rem auto 0;
+        background-color: $light-grey;
+        padding: 1rem;
+        border-radius: 1rem;
+        div{
+            margin: 0;
+            background-color: white;
+            color:$main-black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            border-radius: 1rem;
+        }
+    }
+}
