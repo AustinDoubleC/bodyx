@@ -21,8 +21,14 @@ nav #nav-main {
 nav #nav-main h1, nav #nav-main h3 {
   margin: 0;
 }
+@media screen and (max-width: 800px) {
+  nav #nav-main h1, nav #nav-main h3 {
+    font-size: 1rem;
+  }
+}
 nav #nav-main h1 {
   font-size: 2.5rem;
+  margin-left: 2rem;
 }
 @media screen and (max-width: 800px) {
   nav #nav-main h1 {
@@ -31,6 +37,27 @@ nav #nav-main h1 {
 }
 nav #nav-main #greeting {
   margin-right: 0.5rem;
+}
+nav #nav-main #nav-right {
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (max-width: 800px) {
+  nav #nav-main #nav-right {
+    flex-direction: column;
+  }
+}
+nav #nav-main p {
+  margin: 0px;
+}
+@media screen and (max-width: 800px) {
+  nav #nav-main p {
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+nav #nav-main p:hover, nav #nav-main p :active {
+  color: rgb(252, 244, 8);
 }
 nav #logo-container {
   margin-left: 0.5rem;
@@ -348,4 +375,11 @@ nav #logo-container #logo-text {
   background-color: #ddd;
   color: #555;
   margin-right: 0.2rem;
+}
+
+#btn-logout {
+  text-align: center;
+}
+#btn-logout:hover, #btn-logout :active {
+  cursor: pointer;
 }/*# sourceMappingURL=portal.css.map */

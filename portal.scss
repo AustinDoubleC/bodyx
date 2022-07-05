@@ -24,15 +24,36 @@ nav{
         align-items: flex-end;
         h1,h3{
             margin: 0;
+            @media screen and(max-width:800px) {
+                font-size: 1rem;
+            }
         }
         h1{
             font-size: 2.5rem;
+            margin-left: 2rem;
             @media screen and(max-width:800px) {
                 font-size: 1.5rem;
             }
         }
         #greeting{
             margin-right: 0.5rem;
+        }
+        #nav-right{
+            display: flex;
+            align-items: flex-end;
+            @media screen and(max-width:800px) {
+                flex-direction: column;
+            }
+        }
+        p{
+            margin: 0px;
+            @media screen and(max-width:800px) {
+                margin-right: 1.5rem;
+                font-size: 0.8rem;
+            }
+            &:hover,:active{
+                color:$secondary-color
+            }
         }
 
     }
@@ -340,4 +361,9 @@ nav{
         }
     }
 }
-
+#btn-logout{
+    text-align: center;
+    &:hover,:active{
+        cursor: pointer;
+    }
+}

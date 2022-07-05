@@ -182,3 +182,13 @@ const submitProgram = ()=>{
     },500)
     
 }
+
+const logout=()=>{
+    auth.signOut().then(()=>{
+        console.log("signout")
+        localStorage.clear()
+        window.location.href="../"
+    })
+    //localStorage.clear()
+    //window.location.href="../"
+}
