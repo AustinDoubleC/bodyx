@@ -128,7 +128,6 @@ function login () {
     const database_ref = database.ref()
     database_ref.child('users/' + user.uid)
     sessionStorage.setItem("username",user.uid)
-    console.log(user)
     window.location = "./portal";
     
   })

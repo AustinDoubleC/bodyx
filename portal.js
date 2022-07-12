@@ -185,7 +185,6 @@ const submitProgram = ()=>{
 
 const logout=()=>{
     auth.signOut().then(()=>{
-        console.log("signout")
         localStorage.clear()
         window.location.href="../"
     })
