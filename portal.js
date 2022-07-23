@@ -18,7 +18,10 @@ const enrollDOM = document.getElementById("enroll")
 const btnProgramSubmit = document.getElementById("btn-submit-program")
 const dashboardDOM = document.getElementById("dashboard")
 
+
+
 let paymentValue = 0
+
 
 const getUserData=()=>{
     database.ref(`/users/${username}/`).once('value')
@@ -43,7 +46,12 @@ const getUserData=()=>{
         dashboardDOM.style.display = "block"
     }
 })}
-getUserData()
+if (username){
+    getUserData()
+}else{
+    console.log("Not logged in")
+    window.location.href="../"
+}
 
 
 const payment = ()=>{
@@ -185,9 +193,7 @@ const submitProgram = ()=>{
 
 const logout=()=>{
     auth.signOut().then(()=>{
-        localStorage.clear()
+        sessionStorage.clear()
         window.location.href="../"
     })
-    //localStorage.clear()
-    //window.location.href="../"
 }
